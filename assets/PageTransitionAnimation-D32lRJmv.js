@@ -1,1 +1,0 @@
-import{j as t,m as o,P as a}from"./index-DWVyYxpX.js";function n({children:i}){return t.jsx(o.section,{className:"w-full h-full",initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.3},children:i})}n.propTypes={children:a.node};export{n as P};
