@@ -3,8 +3,8 @@ const categories: string[] = [
     "olhos",
     "sobrancelhas",
     "narizes",
-    "bocas",
     "camisas",
+    "bocas",
     "cabelos",
 ] as const;
 
