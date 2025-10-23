@@ -65,7 +65,7 @@ const useGridData = () => {
                     return;
                 }
 
-                onReset(() => setCategoryAsset(assetData.assetName));
+                onReset(() => setCategoryAsset(assetData.assetName), "Trocar o corpo do personagem vai resetar todos os assets selecionados.");
             };
 
             return (

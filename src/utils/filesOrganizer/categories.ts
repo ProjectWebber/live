@@ -4,8 +4,8 @@ const categories: string[] = [
     "sobrancelhas",
     "narizes",
     "camisas",
-    "bocas",
     "cabelos",
+    "bocas",
 ] as const;
 
 export { categories };
