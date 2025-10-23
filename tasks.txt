@@ -1,0 +1,7 @@
+- Fazer pagina do customizador
+    - Lista de categorias - OK
+    - Grid de assets - OK
+    - Historico de Assets - OK
+    - Preview
+    - Filtros
+    - Opções do footer
