@@ -74,8 +74,8 @@ h3 {
     --color-background-gradient-start: hsl(220 7% 5%);
     --color-background-gradient-end: hsl(220 7% 0%);
     --color-background-dark: hsl(220 7% 5%);
-    --color-background: hsl(220 7% 11%);
-    --color-background-light: hsl(220 7% 17%);
+    --color-background: hsl(220 7% 13%);
+    --color-background-light: hsl(220 7% 20%);
 
     --color-accent: hsl(0 0% 35%);
     --color-muted: hsl(0 0% 25%);
