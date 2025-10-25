@@ -21,7 +21,7 @@ function App() {
     }, [themeInitializer, theme, currentScheme]);
 
     return (
-        <Router basename="beta">
+        <Router>
             <PageRouting />
         </Router>
     );
