@@ -7,13 +7,13 @@ import useScrollFade from "@/hooks/useScrollFade";
 // Stores
 import SelectionManagerStore from "@/stores/SelectionManagerStore";
 import { twMerge } from "tailwind-merge";
+import useXScroll from "@/hooks/useXScroll";
 
 const GridContainer = ({ children }: HTMLAttributes<HTMLDivElement>) => {
-    const selectedCategory = SelectionManagerStore(
-        (state) => state.selectedCategory
-    );
-    const ref = useRef(null);
-    const { fade } = useScrollFade(ref);
+    const selectedCategory = SelectionManagerStore((state) => state.selectedCategory);
+    const gridContainerRef = useRef(null);
+    useXScroll(gridContainerRef);
+    const { fade } = useScrollFade(gridContainerRef);
 
     const style = twMerge(
         "flex h-full w-full flex-1 flex-col flex-wrap place-content-start overflow-x-scroll overflow-y-hidden px-2 gap-[3%] md:gap-1 pb-1 mb-2",
@@ -21,11 +21,7 @@ const GridContainer = ({ children }: HTMLAttributes<HTMLDivElement>) => {
     );
 
     return (
-        <section
-            className={style}
-            key={selectedCategory + "-gridData-Section"}
-            ref={ref}
-        >
+        <section className={style} key={selectedCategory + "-gridData-Section"} ref={gridContainerRef}>
             {children}
         </section>
     );

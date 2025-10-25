@@ -11,9 +11,11 @@ import captalize from "@/utils/captalize";
 
 // Components
 import TabItem from "./TabItem";
+import useXScroll from "@/hooks/useXScroll";
 
 const Tabs = () => {
     const tabListRef = useRef<HTMLElement | null>(null);
+    useXScroll(tabListRef);
     const { fade } = useScrollFade(tabListRef);
 
     const TabsList = categoryTabs.map((category) => {

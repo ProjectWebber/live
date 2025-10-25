@@ -9,9 +9,11 @@ import useScrollFade from "@/hooks/useScrollFade";
 import ResetCharacterButton from "./Action/ResetCharacterButton";
 import DownloadImageButton from "./Action/DownloadImageButton";
 import SaveCharacterButton from "./Action/SaveCharacterButton";
+import useXScroll from "@/hooks/useXScroll";
 
 const ActionsFooter = memo(() => {
     const footerRef = useRef<HTMLElement>(null);
+    useXScroll(footerRef);
     const { fade } = useScrollFade(footerRef);
 
     return (
