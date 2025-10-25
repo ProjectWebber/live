@@ -6,7 +6,7 @@ import { useRef } from "react";
 import useScrollFade from "@/hooks/useScrollFade";
 
 // Utils
-import { categories } from "@/utils/filesOrganizer/categories";
+import { categoryTabs } from "@/utils/filesOrganizer/categories";
 import captalize from "@/utils/captalize";
 
 // Components
@@ -16,7 +16,7 @@ const Tabs = () => {
     const tabListRef = useRef<HTMLElement | null>(null);
     const { fade } = useScrollFade(tabListRef);
 
-    const TabsList = categories.map((category) => {
+    const TabsList = categoryTabs.map((category) => {
         return (
             <TabItem id={`tab-customizer-${category}`} key={`tab-customizer-${category}`} category={category}>
                 {captalize(category)}

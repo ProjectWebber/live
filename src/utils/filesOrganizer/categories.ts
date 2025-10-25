@@ -1,11 +1,7 @@
-const categories: string[] = [
-    "corpos",
-    "olhos",
-    "sobrancelhas",
-    "narizes",
-    "camisas",
-    "cabelos",
-    "bocas",
-] as const;
+import type { Categories } from "@/types/Categories";
 
-export { categories };
+const categories = ["corpos", "olhos", "sobrancelhas", "narizes", "camisas", "cabelos", "bocas"] as const;
+
+const categoryTabs: Categories[] = ["corpos", "cabelos", "olhos", "sobrancelhas", "narizes", "bocas", "camisas"];
+
+export { categories, categoryTabs };
