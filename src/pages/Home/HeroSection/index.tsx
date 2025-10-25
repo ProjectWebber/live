@@ -12,13 +12,13 @@ const HeroSection = () => {
 
     return (
         <section
-            className="px-screen-responsive flex w-full flex-col items-center gap-9 pt-8 pb-14 sm:flex-row sm:justify-between sm:gap-0 sm:py-6 md:py-24"
+            className="px-screen-responsive flex w-full flex-col items-center gap-9 pt-8 pb-14 sm:flex-row sm:justify-between sm:gap-0 sm:py-6 md:py-16"
             id="hero"
         >
             <img
                 src={heroImageAsset}
                 alt="Imagem ilustrativa dos personagens"
-                className="drop-shadow-primary h-fit w-full object-contain sm:order-2 max-w-100 sm:max-h-none sm:max-w-[50%] lg:max-w-[53%] 2xl:max-w-[53rem]"
+                className="drop-shadow-primary h-fit w-full max-w-100 object-contain sm:order-2 sm:max-h-none sm:max-w-[50%] lg:max-w-[53%] 2xl:max-w-[53rem]"
             />
 
             <div className="flex h-fit w-full max-w-full min-w-[19rem] flex-col justify-center gap-6 md:max-w-[24rem] md:min-w-[24rem] lg:max-w-[29rem] lg:min-w-[29rem] lg:gap-9 2xl:max-w-[37rem] 2xl:min-w-[37rem] 2xl:gap-11">
