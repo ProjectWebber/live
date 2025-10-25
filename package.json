@@ -1,5 +1,6 @@
 {
-    "name": "Project_Webber_Beta_Testing",
+    "name": "Project_Webber_Live",
+    "homepage": "https://projectwebber.github.io/live/",
     "private": true,
     "version": "0.2.0",
     "type": "module",
@@ -13,7 +14,6 @@
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.14",
-        "Project_Webber_Beta_Testing": "link:",
         "appwrite": "^21.2.1",
         "array-includes": "3.1.8",
         "html2canvas-pro": "^1.5.11",

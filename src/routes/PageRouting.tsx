@@ -20,12 +20,12 @@ function PageRouting() {
         <Layout>
             <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
-                    <Route path="" element={<HomePage />} />
-                    <Route path="codigo" element={<CodePage />} />
-                    <Route path="customizador" element={<CustomizerPage />} />
-                    <Route path="customizador/:characterID" element={<CustomizerPage />} />
-                    <Route path="meus-personagens" element={<MyCharactersPage />} />
-                    <Route path="*" element={<NotFoundPage />} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/codigo" element={<CodePage />} />
+                    <Route path="/customizador" element={<CustomizerPage />} />
+                    <Route path="/customizador/:characterID" element={<CustomizerPage />} />
+                    <Route path="/meus-personagens" element={<MyCharactersPage />} />
+                    <Route path="/*" element={<NotFoundPage />} />
                 </Routes>
             </AnimatePresence>
         </Layout>

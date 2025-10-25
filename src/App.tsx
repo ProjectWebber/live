@@ -1,6 +1,6 @@
 // Libs
 import { useEffect } from "react";
-import { BrowserRouter as Router } from "react-router";
+import { HashRouter as Router } from "react-router";
 
 // Routing
 import PageRouting from "@/routes/PageRouting";
@@ -21,7 +21,7 @@ function App() {
     }, [themeInitializer, theme, currentScheme]);
 
     return (
-        <Router>
+        <Router basename="/">
             <PageRouting />
         </Router>
     );

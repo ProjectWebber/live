@@ -30,7 +30,7 @@ const GridItem = memo(({ id, assetData, bodyData, onChange }: GridItemProps) => 
             <InputRadio
                 id={`selection-panel-asset-grid-${id}`}
                 name="selection-panel-asset-grid"
-                className="relative flex aspect-square h-full items-center justify-center transition-all"
+                className="relative flex aspect-square! h-full w-fit items-center justify-center transition-all"
                 checked={isChecked}
                 onChange={onChange}
             >
