@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Cambo&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*Setting Fonts*/
+@font-face {
+    font-family: "SpecialElite";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/specialelite.woff2") format("woff2");
+}
+
+/*Default Styles*/
+* {
+    font-family: "Cambo", serif;
+    letter-spacing: -0.005rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "SpecialElite";
+    letter-spacing: -0.02rem;
+}
+
+@theme {
+    /*Fonts*/
+    --font-specialelite: "SpecialElite", "sans-serif";
+    --font-cambo: "Cambo", serif;
+
+    /*Animations*/
+    --animate-spin-slow: spin 290s linear infinite;
+    --animate-loading: loadingAnimation 1s linear infinite;
+
+    /*Shadows*/
+    --drop-shadow-primary: 0px 0px 5px #1fc05788;
+    --shadow-button: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --shadow-text: 0px 0px 11px rgba(0, 0, 0, 0.62);
+
+    --breakpoint-xs: 25rem;
+
+    /*New Colors*/
+    --color-foreground: hsl(220 7% 5%);
+    --color-foreground-muted: hsl(220 7% 30%);
+
+    --color-background-gradient-start: hsl(220 7% 95%);
+    --color-background-gradient-end: hsl(220 7% 80%);
+    --color-background-dark: hsl(220 7% 80);
+    --color-background: hsl(220 7% 93%);
+    --color-background-light: hsl(220 7% 98%);
+
+    --color-accent: hsl(0 0% 55%);
+    --color-muted: hsl(0 0% 65%);
+
+    --color-primary: #17b34e;
+
+    --color-success: #17b34e;
+    --color-warning: #d6ad27;
+    --color-error: #f23d3d;
+
+    --color-discord: #7289da;
+    --color-golden: #ffdf00;
+    --color-catarse: #17a338;
+
+    --hue-rotate-bg-image: 0deg;
+    --saturate-bg-image: 100%;
+}
+
+:root[data-theme="dark"] {
+    --color-foreground: hsl(220 7% 95%);
+    --color-foreground-muted: hsl(220 7% 70%);
+
+    --color-background-gradient-start: hsl(220 7% 5%);
+    --color-background-gradient-end: hsl(220 7% 0%);
+    --color-background-dark: hsl(220 7% 5%);
+    --color-background: hsl(220 7% 13%);
+    --color-background-light: hsl(220 7% 20%);
+
+    --color-accent: hsl(0 0% 35%);
+    --color-muted: hsl(0 0% 25%);
+}
+:root[color-scheme="blood"] {
+    --color-primary: #fa6257;
+
+    --hue-rotate-bg-image: 220deg;
+    --saturate-bg-image: 200%;
+}
+
+@utility shadow-notification {
+    --tw-shadow: var(--tw-shadow-color, #171717) 0px 4px 15px -6px;
+    box-shadow: var(--tw-shadow);
+}
+
+@layer components {
+    .px-screen-responsive {
+        @apply px-4 sm:px-10 lg:px-15 2xl:px-24;
+    }
+
+    .bg-linear-gradient {
+        @apply from-background-gradient-start to-background-gradient-end bg-linear-to-b;
+    }
+
+    .grid-card-container {
+        @apply grid grid-cols-[repeat(auto-fill,minmax(18rem,1fr))] items-start gap-4;
+    }
+
+    /*Masks (Content Fade Style)*/
+    .content-fade-bottom {
+        mask-image: linear-gradient(to top, transparent 0% 0%, black 15% 100%);
+    }
+    .content-fade-left {
+        mask-image: linear-gradient(to right, transparent 0% 0%, black 15% 100%);
+    }
+    .content-fade-right {
+        mask-image: linear-gradient(to left, transparent 0% 0%, black 15% 100%);
+    }
+    .content-fade-x {
+        mask-image: linear-gradient(
+            to right,
+            transparent 0% 0%,
+            black 15% 85%,
+            transparent 100% 100%
+        );
+    }
+}
+
+* {
+    user-select: none;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+}
+
+img {
+    pointer-events: none;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        opacity: 40%;
+    }
+    50% {
+        opacity: 65%;
+    }
+    100% {
+        opacity: 40%;
+    }
+}
