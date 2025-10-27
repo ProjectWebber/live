@@ -18,7 +18,7 @@ const ActionsFooter = memo(() => {
 
     return (
         <footer
-            className={twMerge("mb-2 flex h-fit w-full gap-2 overflow-x-auto overflow-y-hidden px-2 pb-2", fade)}
+            className={twMerge("mb-2 flex h-11 w-full gap-2 overflow-x-auto overflow-y-hidden px-2 pb-2", fade)}
             ref={footerRef}
         >
             <ResetCharacterButton />

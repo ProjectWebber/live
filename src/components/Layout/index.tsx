@@ -16,14 +16,14 @@ const Layout = ({ children }: HTMLAttributes<HTMLElement>) => {
 
     return (
         <main
-            className="bg-linear-gradient relative pt-15 flex h-[100dvh] w-[100dvw] flex-col overflow-y-scroll"
+            className="bg-linear-gradient relative flex h-[100dvh] w-[100dvw] flex-col overflow-y-scroll pt-15"
             id="page-layout"
             ref={componentRef}
         >
-            <div className="z-1 flex h-full w-full flex-1 flex-col">
+            <div className="z-1 flex h-full w-full flex-1 shrink-0 flex-col">
                 <Header />
 
-                <section className="relative h-full w-full flex-1">
+                <section className="relative h-full w-full flex-1 shrink-0">
                     <NotificationContainer />
                     {children}
                 </section>

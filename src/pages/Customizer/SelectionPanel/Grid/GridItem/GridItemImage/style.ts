@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 const GridItemImageStyles = tv({
-    base: "absolute h-full w-full !border-transparent transition-all opacity-0 z-2",
+    base: "absolute h-full w-auto !border-transparent transition-all opacity-0 z-2",
     variants: {
         corpo: {
             corpos_f_1: "",

@@ -2,7 +2,7 @@
 import { tv } from "tailwind-variants";
 
 const BaseButtonStyles = tv({
-    base: `flex w-fit h-fit items-center text-nowrap font-medium cursor-pointer transition-all  drop-shadow text-foreground`,
+    base: `flex w-fit h-fit items-center text-nowrap whitespace-nowrap font-medium cursor-pointer transition-all  drop-shadow text-foreground`,
     variants: {
         variant: {
             default: "bg-background-light hover:brightness-115 ",

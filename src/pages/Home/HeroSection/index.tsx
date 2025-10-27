@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import BaseButton from "@/components/Buttons/BaseButton";
 
 // Assets
-import heroImageAsset from "./assets/hero-characters-image.avif";
+import heroImageAsset from "./assets/hero-characters-image.webp";
 
 const HeroSection = () => {
     const navigate = useNavigate();

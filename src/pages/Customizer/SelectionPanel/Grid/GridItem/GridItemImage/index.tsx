@@ -56,7 +56,7 @@ const GridItemImage = ({
                     className={twMerge(
                         GridItemImageStyles({ corpo, category }),
                         className,
-                        "z-1"
+                        "z-1 shrink-0"
                     )}
                     src={bodySrc}
                     alt={bodyAlt}

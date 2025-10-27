@@ -34,7 +34,7 @@ const TabItem = ({ category, id, children }: TabItemProps) => {
             <InputRadio
                 id={id}
                 className={twMerge(
-                    "font-specialelite cursor-pointer text-xl transition-all",
+                    "font-specialelite cursor-pointer text-lg sm:text-xl transition-all",
                     isChecked && "text-foreground",
                     !isChecked &&
                         "text-foreground-muted opacity-70 hover:opacity-100"

@@ -16,7 +16,7 @@ const GridContainer = ({ children }: HTMLAttributes<HTMLDivElement>) => {
     const { fade } = useScrollFade(gridContainerRef);
 
     const style = twMerge(
-        "flex h-full w-full flex-1 flex-col flex-wrap place-content-start overflow-x-scroll overflow-y-hidden px-2 gap-[3%] md:gap-1 pb-1 mb-2",
+        "flex max-h-full h-full w-full flex-1 shrink-0 flex-col flex-wrap place-content-start overflow-x-scroll overflow-y-hidden px-2 gap-1 md:gap-1 pb-1 mb-2",
         fade
     );
 

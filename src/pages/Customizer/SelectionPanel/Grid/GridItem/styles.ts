@@ -1,5 +1,5 @@
 const baseStyle =
-    "relative flex aspect-square! h-[48%] w-fit cursor-pointer items-center justify-center overflow-hidden rounded-[15%] transition-all bg-linear-to-b border";
+    "relative flex aspect-square! h-[48%] w-auto cursor-pointer items-center justify-center overflow-hidden rounded-[15%] transition-all bg-linear-to-b border";
 
 const bgColorStyle =
     "bg-background-light opacity-90 brightness-70 border-muted border-t-accent transition-all";

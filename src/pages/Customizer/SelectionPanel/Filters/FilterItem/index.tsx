@@ -2,15 +2,12 @@ import FiltersStore from "@/stores/FiltersStore";
 import {
     type LabelHTMLAttributes,
     type ReactNode,
-    type FormEvent,
-    useState,
-    useEffect,
     useCallback,
     memo,
 } from "react";
 import { twMerge } from "tailwind-merge";
 
-const baseStyle = `max-w-fit text-nowrap flex items-center justify-center rounded-3xl  px-4 py-1 transition-all
+const baseStyle = `max-w-fit text-nowrap whitespace-nowrap flex items-center justify-center rounded-3xl  px-4 py-1 transition-all
 
     bg-background-dark hover:bg-background has-checked:bg-background-light
     
