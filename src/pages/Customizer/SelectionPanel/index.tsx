@@ -8,7 +8,7 @@ import Tabs from "./Tabs";
 
 const SelectionPanel = memo(() => {
     return (
-        <section className="flex h-[55%] w-full flex-1 shrink-0 flex-col md:max-h-85 md:max-w-85 lg:max-w-110 xl:max-h-95 xl:max-w-150">
+        <section className="flex h-[56%] min-h-20 w-full flex-1 shrink-0 flex-col md:max-h-85 md:max-w-85 lg:max-w-110 xl:max-h-95 xl:max-w-150">
             <Tabs />
             <Grid />
             <FiltersContainer />

@@ -11,10 +11,12 @@ const modalAvisoForaDoAr = (
                 <div className="flex flex-col">
                     <p>
                         Estamos temporariamente fora do ar 🚧
-                        <br/><br/>
-                        Nosso site está passando por uma instabilidade devido ao alto volume de acessos.
-                        Mas não se preocupe, nossa equipe já está trabalhando para normalizar tudo o mais rápido possível.
-                        <br/><br/>
+                        <br />
+                        <br />
+                        Nosso site está passando por uma instabilidade devido ao alto volume de acessos. Mas não se
+                        preocupe, nossa equipe já está trabalhando para normalizar tudo o mais rápido possível.
+                        <br />
+                        <br />
                         Agradecemos imensamente o apoio e a compreensão de todos! 💙
                     </p>
                 </div>
@@ -34,7 +36,7 @@ interface ModalStoreProps {
 }
 
 const ModalStore = create<ModalStoreProps>((set) => ({
-    modal: modalAvisoForaDoAr,
+    modal: null,
     confirmationModal: null,
 
     addModal: (modal) => set(() => ({ modal })),
