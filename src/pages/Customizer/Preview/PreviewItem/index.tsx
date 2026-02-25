@@ -1,15 +1,14 @@
 // Libs
-import { motion } from "motion/react";
 
 // Types
 import type { Categories } from "@/types/Categories";
-import type { HTMLMotionProps } from "motion/react";
 
 // Stores
 import FilesStore from "@/stores/FilesStore";
 import SelectionManagerStore from "@/stores/SelectionManagerStore";
+import type { ImgHTMLAttributes } from "react";
 
-interface PreviewItemProps extends HTMLMotionProps<"img"> {
+interface PreviewItemProps extends ImgHTMLAttributes<HTMLImageElement> {
     category: Categories;
 }
 
@@ -28,13 +27,7 @@ const PreviewItem = ({ category, ...props }: PreviewItemProps) => {
     return (
         <>
             {assetData && (
-                <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{
-                        opacity: 1,
-                        transition: { duration: 0.15 },
-                    }}
-                    exit={{ opacity: 0, transition: { duration: 0.1 } }}
+                <img
                     src={assetData.url}
                     alt={`Preview do asset ${assetData.assetName}`}
                     key={`preview-${assetData.assetName}-${assetData.id}`}
@@ -42,7 +35,9 @@ const PreviewItem = ({ category, ...props }: PreviewItemProps) => {
                     draggable={false}
                     loading="lazy"
                     decoding="async"
-                    className="text-foreground absolute z-3 h-full opacity-0 transition-all md:h-auto md:w-full"
+                    width={300}
+                    height={300}
+                    className="text-foreground absolute z-3 bg-transparent! w-full opacity-0 transition-all md:h-auto md:w-full md:max-w-none"
                     onLoad={(e) => {
                         e.currentTarget.classList.remove("opacity-0");
                     }}

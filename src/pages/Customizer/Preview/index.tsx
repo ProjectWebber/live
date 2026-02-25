@@ -21,7 +21,8 @@ const Preview = memo(() => {
 
     return (
         <div
-            className="content-fade-bottom relative aspect-square h-[44%] min-h-0  md:h-auto md:w-full md:max-w-130 2xl:max-w-165 self-center"
+            className="content-fade-bottom relative aspect-square h-[44%] max-h-62 self-center md:h-auto md:max-h-full md:w-full md:max-w-125 2xl:max-w-145"
+            style={{ background: "none" }}
             id="preview-container"
             key={"preview-container"}
         >

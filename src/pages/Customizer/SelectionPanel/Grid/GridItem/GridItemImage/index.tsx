@@ -19,31 +19,21 @@ interface GridItemImageProps extends ImgHTMLAttributes<HTMLImageElement> {
     bodyAlt: string;
 }
 
-const GridItemImage = ({
-    className,
-    corpo,
-    category,
-    assetSrc,
-    assetAlt,
-    bodySrc,
-    bodyAlt,
-}: GridItemImageProps) => {
+const GridItemImage = ({ className, corpo, category, assetSrc, assetAlt, bodySrc, bodyAlt }: GridItemImageProps) => {
     const assetRef = useRef<HTMLImageElement>(null);
     const bodyRef = useRef<HTMLImageElement>(null);
 
     const handleLoad: ReactEventHandler<HTMLImageElement> = (e) =>
-        e.currentTarget.complete &&
-        e.currentTarget.classList.remove("opacity-0");
+        e.currentTarget.complete && e.currentTarget.classList.remove("opacity-0");
 
     return (
         <>
             <img
-                className={twMerge(
-                    GridItemImageStyles({ corpo, category }),
-                    className
-                )}
+                className={twMerge(GridItemImageStyles({ corpo, category }), className)}
                 src={assetSrc}
                 alt={assetAlt}
+                width={140}
+                height={140}
                 ref={bodyRef}
                 crossOrigin="anonymous"
                 draggable={false}
@@ -53,13 +43,11 @@ const GridItemImage = ({
             />
             {category !== "corpos" && (
                 <img
-                    className={twMerge(
-                        GridItemImageStyles({ corpo, category }),
-                        className,
-                        "z-1 shrink-0"
-                    )}
+                    className={twMerge(GridItemImageStyles({ corpo, category }), className, "z-1 shrink-0")}
                     src={bodySrc}
                     alt={bodyAlt}
+                    width={140}
+                    height={140}
                     ref={assetRef}
                     crossOrigin="anonymous"
                     draggable={false}

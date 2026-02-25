@@ -1,5 +1,4 @@
 // Libs
-import { motion } from "motion/react";
 
 // Stores
 import MenuStore from "@/stores/MenuStore";
@@ -12,11 +11,7 @@ const MainMenu = () => {
     const closeMenu = MenuStore((state) => state.closeMenu);
 
     return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 0.05, duration: 0.3 }}
+        <section
             className="from-background-gradient-start/50 to-background-gradient-end/50 px-screen-responsive absolute top-0 z-10 flex h-[100dvh] w-full max-w-[100dvw] flex-col justify-between bg-linear-to-br px-8 py-12 backdrop-blur-lg"
         >
             <Logo className="h-fit w-full max-w-100" />
@@ -85,7 +80,7 @@ const MainMenu = () => {
                     </BaseLink>
                 </nav>
             </section>
-        </motion.section>
+        </section>
     );
 };
 

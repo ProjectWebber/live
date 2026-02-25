@@ -16,7 +16,7 @@ const Layout = ({ children }: HTMLAttributes<HTMLElement>) => {
 
     return (
         <main
-            className="bg-linear-gradient relative flex h-[100dvh] w-[100dvw] flex-col overflow-y-scroll pt-15"
+            className="bg-linear-gradient relative flex h-dvh min-h-dvh w-[100dvw] flex-col overflow-y-scroll pt-15"
             id="page-layout"
             ref={componentRef}
         >

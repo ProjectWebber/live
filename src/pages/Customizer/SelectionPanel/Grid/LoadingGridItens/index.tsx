@@ -11,7 +11,7 @@ const LoadingGridItens = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(
     (_, ref) => {
         return (
             <span
-                className="text-foreground flex flex-1 items-center justify-center gap-1"
+                className="text-foreground max-h-56 flex flex-1 items-center justify-center gap-1"
                 ref={ref}
             >
                 <AiOutlineLoading className="animate-spin" /> Carregando...

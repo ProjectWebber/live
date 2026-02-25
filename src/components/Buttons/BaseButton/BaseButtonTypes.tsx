@@ -1,7 +1,7 @@
 // Types
-import type { HTMLMotionProps } from "motion/react";
+import type { ButtonHTMLAttributes } from "react";
 
-interface BaseButtonProps extends HTMLMotionProps<"button"> {
+interface BaseButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     outlined?: boolean;
     variant?: "default" | "primary" | "success" | "warning" | "error" | "transparent";
     rounded?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "fullRounded";

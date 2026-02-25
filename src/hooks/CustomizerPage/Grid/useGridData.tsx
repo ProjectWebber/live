@@ -59,7 +59,7 @@ const useGridData = () => {
             .filter((asset) => asset !== undefined);
 
         const listOfGridItens = filteredAssets.map((assetData) => {
-            const handleOnChange = () => {
+            const handleClick = () => {
                 if (selectedCategory !== "corpos") {
                     setCategoryAsset(assetData.assetName);
                     return;
@@ -74,7 +74,7 @@ const useGridData = () => {
                     assetData={assetData}
                     bodyData={selectedBodyAsset}
                     key={assetData.assetName + "-grid-item"}
-                    onChange={handleOnChange}
+                    onClick={handleClick}
                 />
             );
         });

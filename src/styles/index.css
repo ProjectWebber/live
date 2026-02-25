@@ -24,6 +24,11 @@ h3 {
     letter-spacing: -0.02rem;
 }
 
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
 @theme {
     /*Fonts*/
     --font-specialelite: "SpecialElite", "sans-serif";
@@ -116,12 +121,7 @@ h3 {
         mask-image: linear-gradient(to left, transparent 0% 0%, black 15% 100%);
     }
     .content-fade-x {
-        mask-image: linear-gradient(
-            to right,
-            transparent 0% 0%,
-            black 15% 85%,
-            transparent 100% 100%
-        );
+        mask-image: linear-gradient(to right, transparent 0% 0%, black 15% 85%, transparent 100% 100%);
     }
 }
 

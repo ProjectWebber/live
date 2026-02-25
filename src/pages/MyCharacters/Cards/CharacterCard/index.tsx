@@ -1,5 +1,4 @@
 // Libs
-import { motion } from "motion/react";
 
 // Types
 import type { savedCharacterProps } from "@/types/SavedCharacterProps";
@@ -27,8 +26,7 @@ function GridItem({ id, characterData }: GridItemProps) {
     };
 
     return (
-        <motion.div
-            whileHover={{ y: -5 }}
+        <div
             className="xs:max-w-full border-primary/50 hover:border-primary bg-background/80 hover:bg-background/100 flex h-fit! w-full! flex-col overflow-hidden rounded-2xl border transition-colors"
         >
             <div className="aspect-square w-full pb-4">
@@ -53,7 +51,7 @@ function GridItem({ id, characterData }: GridItemProps) {
                     Ver Mais
                 </BaseButton>
             </div>
-        </motion.div>
+        </div>
     );
 }
 

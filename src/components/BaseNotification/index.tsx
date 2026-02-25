@@ -1,5 +1,4 @@
 // Libs
-import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 
 // Types
@@ -20,14 +19,7 @@ const BaseNotification = ({
     const { handleClick } = useNotificationDestruction(componentKey);
 
     return (
-        <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{
-                x: 0,
-                opacity: 1,
-                transition: { duration: 0.22, type: "spring" },
-            }}
-            exit={{ x: 50, opacity: 0, transition: { duration: 0.16 } }}
+        <div
             className={twMerge(styles({ variant }), className)}
             onClick={handleClick}
             {...props}

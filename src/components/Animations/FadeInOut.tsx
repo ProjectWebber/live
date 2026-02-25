@@ -1,19 +1,10 @@
 // Libs
-import { motion } from "motion/react";
 
 // Types
-import type { HTMLMotionProps } from "motion/react";
+import type { HTMLAttributes } from "react";
 
-const FadeInOut = ({ ...props }: HTMLMotionProps<"section">) => {
-    return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{duration: 0.15}}
-            {...props}
-        />
-    );
+const FadeInOut = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
+    return <section {...props} />;
 };
 
 export default FadeInOut;

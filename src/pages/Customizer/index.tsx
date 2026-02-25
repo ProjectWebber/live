@@ -12,7 +12,7 @@ const CustomizerPage = () => {
 
     return (
         <FadeInOut className="px-screen-responsive flex h-full max-h-full w-full flex-1 flex-col justify-between">
-            <section className="flex h-auto flex-1 flex-col items-center md:w-full md:flex-row-reverse md:justify-between">
+            <section className="flex h-auto flex-1 flex-col items-center w-full md:flex-row-reverse md:justify-between">
                 <Preview />
                 <SelectionPanel />
             </section>

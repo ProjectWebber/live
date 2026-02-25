@@ -1,6 +1,6 @@
-import type { HTMLMotionProps } from "motion/react";
+import type { HTMLAttributes } from "react";
 
-interface NotificationProps extends HTMLMotionProps<"div"> {
+interface NotificationProps extends HTMLAttributes<HTMLDivElement> {
     variant?: "default" | "primary" | "success" | "warning" | "error";
     componentKey: string;
 }
