@@ -2,7 +2,7 @@
     "name": "Webber_Live",
     "homepage": "https://projectwebber.github.io/live/",
     "private": true,
-    "version": "0.2.0",
+    "version": "0.2.3",
     "type": "module",
     "scripts": {
         "dev": "vite",
